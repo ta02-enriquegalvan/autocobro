@@ -1,0 +1,93 @@
+@import url('./item_selection.css');
+@import url('./payment_product.css');
+@import url('./resume.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+.content-background{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightskyblue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.content{
+    width: inherit;
+    height: 100vh;
+    background: linear-gradient(0deg, white 80%, transparent 80%);
+}
+
+/*https://www.freepik.es/icono/tarjeta-credito_1849298#fromView=search&term=Compra&page=1&position=59&track=ais*/
+
+.btn-next{
+    background-color: #33ad33;
+    color: white;
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    border: 4px solid #359535;
+    box-shadow: 3px 3px 0px 0px #359535;
+    text-shadow: 3px 3px 0px #359535;
+
+    font-size: xx-large;
+    font-weight: bold;
+    transition: .2s ease background-color, .2s ease border, .2s ease box-shadow, .2s ease text-shadow, .25s ease opacity;
+}
+.btn-next:active{
+    background-color: #358d35;
+    border: 4px solid #2b732b;
+    box-shadow: 0px 0px 0px 0px #359535;
+    text-shadow: 1px 3px 0px #3e673e;
+    cursor: pointer;
+}
+/*
+box-shadow: 3px 3px 0px 0px #359535, -3px -3px 0px #359535;
+    box-shadow: 3px -3px 0px 0px #359535, -3px 3px 0px #359535;
+    
+    */
+@font-face {
+    font-family: 'Jost';
+    src:    url('./Jost/Jost-VariableFont_wght.ttf');
+    font-display: swap;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5rem;
+    background: whitesmoke;
+    margin-inline: 6rem;
+    margin-block: 1rem;
+    border: 1px solid darkgray;
+    display: flex;
+}
+.modal > ul {
+    width: 20%;
+    list-style: none;
+    font-size: xx-large;
+}
+.modal > ul > li {
+    margin: 1rem;
+    padding-inline: .5rem;
+}.modal > ul > li:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+.modal > div {
+    width: 80%;
+    background: ghostwhite;
+    padding: 1rem;
+    box-shadow: inset 0px 0px 2px 0px dimgray;
+}

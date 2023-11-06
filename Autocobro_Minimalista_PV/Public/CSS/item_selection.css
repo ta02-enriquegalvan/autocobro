@@ -1,0 +1,222 @@
+.item_selection{
+    width: inherit;
+    height: inherit;
+    display: flex;
+}
+
+.item_list{
+    width: 66vw;
+    height: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+.search-product{
+    padding: 2rem 1rem;
+    display: flex;
+    margin-block: auto;
+    justify-content: center;
+    margin-inline: 8% 20%;
+}
+.search-product button{    
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #4095db;
+    padding: .5rem 1rem;
+    font-size: x-large;
+    border-radius: 2px;
+    border: 2px solid #57a1e4;
+    box-shadow: 4px 4px 0px 0px #7eb8f4;
+    font-weight: bold;
+    transition: .2s ease background-color, .2s ease border, .2s ease box-shadow, .2s ease color;
+}
+.search-product button:active{
+    background-color: #60a7e8;
+    color: white;
+    box-shadow: 0px 0px 0px 0px #7eb8f4;
+    cursor: pointer;
+}
+.item_list .title{
+    height: 20%;
+    display: flex;
+}
+.item_list .title h1{
+    margin-block: auto;
+    margin-inline: 8% 20%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 3px 1px #3f94db;
+    font-size: xxx-large;
+}
+.item_list > ul{
+    background: linear-gradient(0deg, whitesmoke, rgb(245 245 245 / 30%));
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-bottom-style: unset;
+    box-shadow: 6px -7px 0px rgb(211 211 211 / 50%);
+    height: 70%;
+    list-style: decimal-leading-zero;
+    margin: auto 20% 5% 8%;
+    max-height: 70%;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse;
+/* Estilos específicos de navegadores basados en WebKit (Chrome y Safari) */
+  /* Solo se aplicarán en navegadores WebKit, pero no afectarán a otros navegadores */
+  &::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: cornflowerblue; /* Color de la barra de desplazamiento */
+  }
+  &::-webkit-scrollbar-track {
+    background-color: lightgray; /* Color de la pista de la barra de desplazamiento */
+  }
+}
+.item_list > ul ul:not(.design) {
+    height: 100%; 
+    list-style-type: decimal-leading-zero;
+}
+.item_list ul ul:not(.design) li{
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    margin: 2.5rem;
+}
+.item_list ul ul li .item_info{
+    display: flex;
+}
+.item_list ul ul:not(.design) li .item_info h2{
+    width: 60%;
+    font-weight: normal;
+}
+.item_list ul ul:not(.design) li .item_info div{
+    width: 40%;
+}
+.item_list ul ul:not(.design) li .item_info div div:first-child{
+    font-size: xx-large;
+    width: 100%;
+    text-align: end;
+    color: forestgreen;
+}.item_list ul ul:not(.design) li .item_info div div:nth-child(2){
+    width: 100%;
+    text-align: end;
+    color: gray;
+}.item_list ul ul:not(.design) li .item_info div div:last-child{
+    color: indianred;
+    font-size: medium;
+    text-align: end;
+    width: 100%;
+}
+.item_list ul ul.design {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+.item_list ul ul.design li {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 15px solid white;
+    border-left: 5px solid lightgray;
+    border-right: 10px solid transparent;
+    margin-inline: auto;
+}
+.steps{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.steps .progressive-bar{
+    display: flex;
+    background: linear-gradient(90deg, #358d35 50%, white 0%);
+
+    background-size: 200% 100%; /* Doble de ancho para hacer espacio para la transición */
+    background-position-x: 100%; /* Inicialmente, el gradiente está completamente a la izquierda */
+    background-position-y: 0%;
+    transition: 1s ease background-position;
+
+    height: 2rem;
+    border-radius: 3px;
+}
+.steps .progressive-bar > div{
+    background: linear-gradient(90deg, #59c359 50%, white 0%);
+
+    background-size: 200% 100%; /* Doble de ancho para hacer espacio para la transición */
+    background-position-x: 100%; /* Inicialmente, el gradiente está completamente a la izquierda */
+    background-position-y: 0%;
+    transition: 1s ease background-position;
+    
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-inline: 2rem;
+}
+.steps .progressive-bar > div > div {
+    background-color: white;
+    padding: .8rem;
+    border-radius: 50%;
+    display: flex;
+}
+.steps .progressive-bar img{
+    width: 2rem;
+}
+.step-1-options,.step-2-options,.step-3-options{
+    transition: 1s ease opacity;
+    height: 55%;
+}
+.step-1-options .command-buttons,.step-2-options .command-buttons,.step-3-options .command-buttons{
+    height: 80%;
+    display: flex;
+}
+.step-1-options .direction-buttons,.step-2-options .direction-buttons,.step-3-options .direction-buttons {
+    display: flex;
+}
+.step-1-options .direction-buttons button,.step-2-options .direction-buttons button,.step-3-options .direction-buttons button{
+    margin-inline: auto;
+}
+.command-buttons > div:first-child{
+    margin: auto;
+    color: darkslategray;
+}
+.command-buttons h3{
+    font-weight: normal;
+    text-align: end;
+    font-size: xx-large;
+}
+
+.help-options{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    height: 20%;
+}
+.help-options div{
+    margin-bottom: 1rem;
+    background-color: transparent;
+    padding: .2rem;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    display: flex;
+    cursor: pointer;
+}
+.help-options div:hover{
+    background-color: #efefef;
+    border: 2px solid #c9c9c9
+}
+.help-options span{
+    font-size: xx-large;
+    color: gray;
+}

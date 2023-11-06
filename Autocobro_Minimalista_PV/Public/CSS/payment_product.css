@@ -1,0 +1,64 @@
+.payment-product{
+    height: 70%;
+    margin: auto 20% 5% 8%;
+    background: linear-gradient(0deg, whitesmoke, rgb(245 245 245 / 30%));
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    box-shadow: 6px -7px 0px rgb(211 211 211 / 50%);
+}
+
+.payment-product > ul{
+    list-style: none;
+    padding: 2rem;
+    overflow-x: auto;
+    height: 90%;
+}
+
+.payment-product summary::marker{
+    color: transparent;
+}
+.payment-product summary > div {
+    display: flex;
+    align-items: center;
+    color: darkslategray;
+}
+.payment-product summary > div > div {
+    margin-right: 2rem;
+}
+.payment-product summary > div > div > span {
+    font-size: xxx-large;
+}
+.payment-product summary > div > h3 > small {
+    font-weight: normal;
+    color: gray;
+}
+
+.payment-product details > div {
+    padding: 3rem 1rem;
+}
+
+.payment-product details > div h3 {
+    font-weight: normal;
+    color: darkslategray;
+}
+
+.payment-product details > div > ul{
+    list-style: square;
+}
+.payment-product details > div > ul li::marker{
+    color: transparent;
+}
+.payment-product details > div > ul li:hover::marker{
+    color: dodgerblue;
+}
+.payment-product details > div > ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-product details > div > ul li:not(.available){
+    color: gray;
+    background: lightgray;
+}

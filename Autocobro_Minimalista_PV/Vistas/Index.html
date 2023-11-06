@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocobro</title>
+    <link rel="stylesheet" href="../Public/CSS/init.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="content-background">
+        <div class="initial"></div>
+        <div class="content">
+            <div class="item_selection">
+                <div class="item_list">
+                    <div class="title">
+                        <h1>Agrega productos al carrito</h1>
+                    </div>
+                    <div class="search-product" style="transition: .25s ease opacity;"><button type="button"><span style="margin-right: 1rem;" class="material-symbols-outlined">add_shopping_cart</span>&nbsp;Buscar producto</button></div>
+                    <ul class="selected-product" style="transition: .25s ease opacity;">
+                        <li>
+                            <ul class="design">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="payment-product" style="display: none; opacity: 0; transition: .25s ease opacity;">
+                        <ul class="payment-list">
+                            <li class="tarjeta" style="opacity: 1; transition: .25s ease opacity;">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <div>
+                                                <span class="material-symbols-outlined">
+                                                    credit_card
+                                                </span>
+                                            </div>
+                                            <h3>
+                                                Pagar con tarjeta
+                                                <br>
+                                                <small>Mastercard, Visa, Tarjeta Cliente Super, Paypal</small>
+                                            </h3>
+                                        </div>
+                                    </summary>
+                                    <div>
+                                        <h3>Selecciona la tarjeta que vas a usar:</h3>
+                                        <ul>
+                                            <li><label class="m_card" for="m_card">Crédito</label><input id="m_card" hidden="hidden" type="checkbox">
+                                                <span class="material-symbols-outlined" style="opacity: 0; transition: .25s ease opacity; color: forestgreen;">
+                                                    credit_score
+                                                </span>
+                                            </li>
+                                            <li><label class="v_card" for="v_card">Débito</label><input id="v_card" hidden="hidden" type="checkbox">
+                                                <span class="material-symbols-outlined" style="opacity: 0; transition: .25s ease opacity; color: forestgreen;">
+                                                    credit_score
+                                                </span>
+                                            </li>
+                                            <li class="available"><label class="cs_card" for="cs_card">Tarjeta Cliente Super</label><input id="cs_card" hidden="hidden" type="checkbox">
+                                                <span class="material-symbols-outlined" style="opacity: 0; transition: .25s ease opacity; color: forestgreen;">
+                                                    credit_score
+                                                </span>
+                                            </li>
+                                            <li><label class="pp_card" for="pp_card">Paypal</label><input id="pp_card" hidden="hidden" type="checkbox">
+                                                <span class="material-symbols-outlined" style="opacity: 0; transition: .25s ease opacity; color: forestgreen;">
+                                                    credit_score
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </li>
+                            <li class="efectivo" style="opacity: 1; transition: .25s ease opacity;">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <div>
+                                                <span class="material-symbols-outlined">
+                                                    payments
+                                                </span>
+                                            </div>
+                                            <h3>
+                                                Pagar con efectivo
+                                                <br>
+                                                <small>Se aceptan billetes de. $20, $50, $100, $200, $500. Monedas de: $1, $2, $5, $10.</small>
+                                            </h3>
+                                        </div>
+                                    </summary>
+                                    <div>
+                                        <h3>&nbsp;</h3>
+                                        <ul>
+                                            <li class="available"><label class="m_efectivo" for="m_card">Efectivo</label><input id="m_efectivo" hidden="hidden" type="checkbox">
+                                                <span class="material-symbols-outlined" style="opacity: 0; transition: .25s ease opacity; color: forestgreen;">
+                                                    Paid
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="resume" style="display: none; opacity: 0; transition: .25s ease opacity;">
+                        <div><img src="../Public/Multimedia/payment_method_waiting.png" alt="Waiting for payment..."></div>
+                        <div>
+                            <h2 style="text-align: center;">La terminal está a la espera, ingresa tu tarjeta por favor...</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div></div>
+                <div class="info">
+                    <div class="steps">
+                        <div class="progressive-bar">
+                            <div class="step-1"><div><img src="../Public/Multimedia/item_selection.png" alt="Item Selection"></div></div>
+                            <div class="step-2"><div><img src="../Public/Multimedia/payment_method.png" alt="Payment Method"></div></div>
+                            <div class="step-3"><div><img src="../Public/Multimedia/payment_receipt.png" alt="Payment Receipt"></div></div>
+                        </div>
+                    </div>
+                    <div class="step-1-options">
+                        <div class="command-buttons" style="transition: .25s ease opacity;">
+                            <div>
+                                <h3><b>Total de productos:</b> <div class="e_count">0</div></h3>
+                                <br>
+                                <h3><b>Monto total a pagar:</b> <div class="e_total">$0</div></h3>
+                                <br>
+                                <h3 style="color: indianred;"><b>En esta compra ahorraste:</b> <div class="e_ahorro">$0</div></h3>
+                            </div>
+                        </div>
+                        <div class="direction-buttons" style="justify-content: center;margin-top: 3rem;">
+                            <button type="button" id="next-1" class="btn-next"><span style="display: block;">Siguiente</span><span style="display: none;">Listo&nbsp;<span class="material-symbols-outlined">done</span></span></button>
+                            <button type="button" id="next-2" class="btn-next" style="display: none; opacity: 0;"><span>Siguiente</span><span style="display: none;">Listo&nbsp;<span class="material-symbols-outlined">done</span></span></button>
+                            <div class="receipt-resume" style="display: none; opacity: 0; transition: .25s ease opacity; margin-block: auto;height: 100%;overflow-y: auto;margin-top: 2rem;background: ghostwhite;border: 3px solid lightsteelblue;padding-inline: 2rem;border-radius: 3px;box-shadow: 6px 5px 0px lightgrey;">
+                                <div style="display: flex;flex-direction: column;align-items: center;padding-block: 1rem;">
+                                    <h2>Gracias por comprar en</h2>
+                                    <img src="../Public/Multimedia/logo-angosto.png" alt="">
+                                    <h3 style="margin-block: 2rem;color: dimgray;">Resumen de compra:</h3>
+                                </div>
+                                <table>
+                                    <thead style="position: sticky;top: 0;background: ghostwhite;">
+                                        <tr>
+                                            <th>Cant</th>
+                                            <th>Artículo</th>
+                                            <th>Precio</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <div style="position: sticky;bottom: 0;background: ghostwhite;box-shadow: 0px -6px 3px -3px lightgray;padding-bottom: 1rem;">
+                                    <hr>
+                                    <br>
+                                    <h1 style="font-weight: 500;text-align: end;">TOTAL: </h1>
+                                    <br>
+                                    <h4 style="color: indianred;text-align: end;">Comprando en Guajardo usted ahorra: </h4>
+                                    <br>
+                                    <h3>Método de pago: </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help-options">
+                        <div><span class="material-symbols-outlined">help</span></div>
+                        <div><span class="material-symbols-outlined">support</span></div>
+                        <div><span class="material-symbols-outlined">manage_accounts</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-product" style="display: none;">
+            <ul>
+                <li>Buscar Producto</li>
+                <li>Salir</li>
+            </ul>
+            <div class="li-1">
+                <div>
+                    Buscar producto:
+                    <input type="search" name="search-item" id="search-item" />
+                </div>
+                <ul style="width: 100%;overflow-y: auto;height: 100%;font-size: small;"></ul>
+            </div>
+        </div>
+        <div class="modal modal-system" style="display: none;">
+            <ul>
+                <li>Inicio de Sesión</li>
+                <li>Cancelar Producto</li>
+                <li>Salir</li>
+            </ul>
+            <div class="li-1">Contenido 1</div>
+            <div class="li-2" style="display: none;">Contenido 2</div>
+        </div>
+    </div>
+    <script src="../Public/JS/product_objects.js"></script>
+    <script>
+        const steps = ["Agrega productos al carrito", "Selecciona tu método de pago", "Confirma tu compra"];
+        document.querySelector('.item_list ul.selected-product ul').addEventListener('click',function(){
+            let product = getRandomProduct();
+            console.log(product);
+            let li =    '<li>'
+                            +'<div class="item_info">'
+                                +'<h2><span>' + product.Nombre + '</span><br><div style="color: gray;font-size: small;">#001290129</div><small>x' + product.Cantidad + '</small></h2>'
+                                +'<div>'
+                                    +'<div class="item-discount-price">$' + ((product.Precio - (product.Precio * (product.Descuento / 100))) * product.Cantidad).toFixed(2) + '</div>'
+                                    +'<div class="item-normal-price"><span>precio normal</span>&nbsp;$' + product.Precio + '</div>'
+                                    +'<div><span>descuento</span>&nbsp;' + product.Descuento + '%</div>'
+                                +'</div>'
+                            +'</div>'
+                        +'</li>'
+            // Agregar el nuevo li al final de la lista ul
+            document.querySelector('.item_list ul.selected-product ul:not(.design)').insertAdjacentHTML('beforeend', li);
+            document.querySelector('.e_count').innerHTML = document.querySelector('.item_list ul ul:not(.design)').childElementCount;
+            let sum = 0, save = 0;
+            document.querySelectorAll('.item_list ul.selected-product ul:not(.design) li').forEach(function (e){
+                sum = sum + parseFloat(e.querySelector('div:first-child > div:last-child > div:first-child').innerHTML.split('$')[1]);
+                save = save + parseFloat(parseFloat(e.querySelector('div:first-child > div:last-child > div:first-child').innerHTML.split('$')[1]) - parseFloat( parseInt(e.querySelector('div:first-child > h2 > small').innerHTML.split('x')[1]) * parseFloat(e.querySelector('div:first-child > div:last-child > div:nth-child(2)').innerHTML.split('$')[1]) ));
+            })
+            document.querySelector('.e_total').innerHTML = '$' + sum.toFixed(2);
+            document.querySelector('.e_ahorro').innerHTML = '$' + save.toFixed(2).split('-')[1];
+        })
+
+        // Selecciona todos los elementos que deseas agregar la funcionalidad de click
+        const elements = document.querySelectorAll('.steps > .progressive-bar > div');
+        const buttons_next = document.querySelectorAll('.info .direction-buttons > .btn-next');
+        // Espera 2000 milisegundos (2 segundos) y luego ejecuta la función
+        setTimeout(function() {
+        // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+        document.querySelector('.progressive-bar').style.backgroundPositionX = "66.6667%";
+        }, 2000);
+        // Recorre cada elemento y agrega un controlador de eventos click
+        elements.forEach(function (element) {
+            element.addEventListener('click', function () {
+                change_position(this.className.split('-')[1])
+                console.log(this.parentElement.style.backgroundPositionX); // `this` se refiere al elemento que se hizo clic
+            });
+        });
+        
+        function change_position(element){
+            let percentage = 0;
+            switch (parseInt(element)) {
+                    case 1:
+                        percentage = (100/3) * 2;
+                        break;
+                    case 2:
+                        percentage = (100/3) * 1;
+                        break;
+                    case 3:
+                        percentage = (100/3) * 0;
+                        break;
+                    default:
+                        percentage = 100;
+                }
+                let nombre = '.step-' + element
+                document.querySelector(nombre).closest('.progressive-bar').style.backgroundPositionX = percentage + "%"; // Reemplaza "nuevo-valor" con el valor deseado
+        }
+        buttons_next.forEach(function (element) {
+            element.addEventListener('click', function () {
+                let button = this;
+                switch(parseInt(this.id.split('-')[1])){
+                    case 1:
+                        /*button.parentElement.parentElement.style.opacity = 0;*/
+                        /*
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            button.parentElement.parentElement.style.display = 'none'
+                            document.querySelector('.step-2-options').style.display = '';
+                        }, 1000);
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            document.querySelector('.step-2-options').style.opacity = 1;
+                        }, 2000);
+                        */
+                        document.querySelector('.step-1').style.backgroundPositionX = '0%';
+                        button.children[0].style.display = 'none';
+                        button.children[1].style.display = '';
+                        setTimeout(function() {
+                            change_position(2)
+                            button.style.opacity = 0;
+                            document.querySelector('.search-product').style.opacity = 0;
+                            document.querySelector('.selected-product').style.opacity = 0;
+                        }, 1000);
+                        setTimeout(function() {
+                            document.querySelector('.item_list .title h1').innerHTML = steps[1].toString();
+                            button.style.display = 'none';
+                            document.querySelector('#next-2').style.display = '';
+                            document.querySelector('.search-product').style.display = 'none';
+                            document.querySelector('.selected-product').style.display = 'none';
+                            document.querySelector('.payment-product').style.display = '';
+                        }, 2000);
+                        setTimeout(function() {
+                            document.querySelector('.payment-product').style.opacity = 1;
+                            document.querySelector('#next-2').style.opacity = 1;
+                        }, 3000);
+                    break;
+                    case 2:
+                        /*button.parentElement.parentElement.style.opacity = 0;
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            /*button.parentElement.parentElement.style.display = 'none'
+                            document.querySelector('.step-3-options').style.display = '';
+                            document.querySelector('.step-2').style.backgroundPositionX = '0%';
+                        }, 1000);
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            document.querySelector('.step-3-options').style.opacity = 1;
+                        }, 2000);
+                        */
+                        document.querySelector('.step-2').style.backgroundPositionX = '0%';
+                        button.children[0].style.display = 'none';
+                        button.children[1].style.display = '';
+                        setTimeout(function() {
+                            change_position(3)
+                            button.style.opacity = 0;
+                            document.querySelector('.payment-product').style.opacity = 0;
+                            document.querySelector('.command-buttons').style.opacity = 0;
+                        }, 1000);
+                        setTimeout(function() {
+                            document.querySelector('.item_list .title h1').innerHTML = steps[2].toString();
+                            button.style.display = 'none';
+                            document.querySelector('.receipt-resume').style.display = '';
+                            document.querySelector('.command-buttons').style.display = 'none';
+                            document.querySelector('.payment-product').style.display = 'none';
+                            document.querySelector('.resume').style.display = 'flex';
+                            
+
+
+                            let productList = document.querySelector(".selected-product");
+                            let receiptTable = document.querySelector(".receipt-resume table");
+
+                            
+
+                            // Agregar un evento de clic a cada botón
+                            productList.querySelectorAll("li:last-child li").forEach(function(productLi) {
+                                addToReceipt(productLi, receiptTable);
+                            });
+
+                            receiptTable.parentElement.querySelector('div:last-child h1').innerHTML += '<span style="color: darkcyan;">' + document.querySelector('.e_total').innerHTML + '</span>';
+                            receiptTable.parentElement.children[2].querySelector('h4').innerHTML += document.querySelector('.e_ahorro').innerHTML;
+                            receiptTable.parentElement.children[2].querySelector('h3').innerHTML += '<span style="color: darkcyan;">' + payment_method + '</span>';
+
+                        }, 2000);
+                        setTimeout(function() {
+                            document.querySelector('.direction-buttons').style.height = '100%';
+                            /*
+                            document.querySelector('.receipt-resume').innerHTML = document.querySelector('.selected-product').innerHTML;
+                            */
+                            document.querySelector('.resume').style.opacity = 1;
+                            document.querySelector('.receipt-resume').style.opacity = 1;
+                            document.querySelector('.receipt-resume').style.marginBlock = 'auto';
+                        }, 3000);
+                        setTimeout(function() {
+                            document.querySelector('.step-3').style.backgroundPositionX = '0%';
+                            let receiptTable = document.querySelector(".receipt-resume table");
+                            let container = receiptTable.parentElement.children[2];
+
+                            let h3 = container.querySelector('h3');
+
+                            h3.style.justifyContent = 'space-around';
+                            h3.style.alignItems = 'center';
+                            h3.style.display = 'flex';
+                            h3.style.textAlign = 'center';
+                            h3.style.color = 'white';
+                            h3.style.fontSize = 'xx-large';
+                            h3.style.background = '#358d35';
+                            h3.style.textShadow = '2px 2px darkgreen';
+                            h3.style.borderRadius = '5px';
+                            h3.style.border = '4px solid #59c359';
+
+                            document.querySelector('.resume img').src = '../Public/Multimedia/like_process.png';
+                            document.querySelector('.resume h2').innerHTML = 'El pago se ha concretado exitosamente, oprime <a href="#" id="reloadPageLink">Finalizar</a> para regresar al inicio.';
+
+                            // Agrega un evento click al enlace que recargará la página
+                            document.querySelector('#reloadPageLink').addEventListener('click', function (event) {
+                                event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+                                location.reload(); // Recarga la página actual
+                            });
+                            receiptTable.parentElement.children[2].querySelector('h3').innerHTML = 'Pago exitoso <span style="font-size: inherit;" class="material-symbols-outlined">verified</span>'
+                        }, 6000);
+                        break;
+                    case 3:
+                        /*button.parentElement.parentElement.style.opacity = 0;
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            button.parentElement.parentElement.style.display = 'none'
+                            document.querySelector('.step-1-options').style.display = '';
+                            document.querySelector('.step-3').style.backgroundPositionX = '0%';
+                        }, 1000);
+                        setTimeout(function() {
+                            // Coloca aquí la línea de JavaScript que deseas ejecutar después de 2 segundos
+                            document.querySelector('.step-1-options').style.opacity = 1;
+                        }, 2000);
+                        */
+                        change_position(1)
+                        break;
+                }
+                console.log(); // `this` se refiere al elemento que se hizo clic
+            });
+        });
+        
+        let payment_method = '';
+        const payment_methods = document.querySelectorAll('.payment-list li.available label');
+
+        payment_methods.forEach(function (element) {
+            element.parentElement.addEventListener('click', function () {
+                let li = this;
+                let li_selected = 'null';
+
+                if (li.children[1].checked) {
+                    // La opción ya estaba seleccionada
+                    li_selected = li.children[2].innerHTML.trim();
+                    li.children[2].style.opacity = 0;
+                    li.children[1].checked = false;
+
+                    // Mostrar el otro método de pago nuevamente
+                    if (li_selected.includes('credit')) {
+                        showPaymentMethod('efectivo');
+                    } else if (li_selected.includes('Paid')) {
+                        showPaymentMethod('tarjeta');
+                    }
+                    payment_method = ''
+                } else {
+                    // La opción no estaba seleccionada
+                    li_selected = li.children[2].innerHTML.trim();
+                    li.children[2].style.opacity = 1;
+                    li.children[1].checked = true;
+                    
+                    // Ocultar el otro método de pago
+                    if (li_selected.includes('credit')) {
+                        hidePaymentMethod('efectivo');
+                    } else if (li_selected.includes('Paid')) {
+                        hidePaymentMethod('tarjeta');
+                    }
+                    payment_method = li.children[0].innerHTML.trim()
+                }
+            });
+        });
+
+        function hidePaymentMethod(method) {
+            const methodElement = document.querySelector(`.payment-list > .${method}`);
+            methodElement.style.opacity = 0;
+            setTimeout(function() {
+                methodElement.style.display = 'none';
+            }, 1000);
+        }
+
+        function showPaymentMethod(method) {
+            const methodElement = document.querySelector(`.payment-list > .${method}`);
+            methodElement.style.display = '';
+            setTimeout(function() {
+                methodElement.style.opacity = 1;
+            }, 1000);
+        }
+        // Función para mover la información del LI a la tabla
+        function addToReceipt(productLi, receiptTable) {
+            let productName = productLi.querySelector("h2 span").textContent;
+            let normalPrice = productLi.querySelector("div.item-normal-price").innerHTML.split('$')[1];
+            let discountedPrice = productLi.querySelector("div.item-discount-price").innerHTML.split('$')[1];
+            
+            let newRow = receiptTable.querySelector('tbody').insertRow();
+            let cellNumber = newRow.insertCell(0);
+            let cellName = newRow.insertCell(1);
+            let cellNormalPrice = newRow.insertCell(2);
+            let cellDiscountedPrice = newRow.insertCell(3);
+            
+            cellNumber.innerHTML = '<div>' + productLi.querySelector("h2 small").textContent.split('x')[1] + '</div>'; // Número de fila
+            cellName.innerHTML = '<div>' + productName + '</div>';
+            cellNormalPrice.innerHTML = '<div>$' + normalPrice + '</div>';
+            cellDiscountedPrice.innerHTML = '<div>$' + discountedPrice + '</div>';
+        }
+        
+        document.querySelector('.help-options div:last-child').addEventListener('click', function(){
+            document.querySelector('.modal-system').style.display = 'flex';
+        })
+        document.querySelector('.modal-system ul li:last-child').addEventListener('click', function(){
+            document.querySelector('.modal-system').style.display = 'none';
+        })
+        document.querySelector('.search-product button').addEventListener('click', function(){
+            document.querySelector('.modal-product').style.display = 'flex';
+            
+            for (let index = 0; index < 9; index++) {
+                let product = getRandomProduct();
+                let li =    '<li>'
+                            +'<div class="item_info" style="margin-block: 1rem;">'
+                                +'<h2><span>' + product.Nombre + '</span><br><div style="color: gray;font-size: small;">#001290129</div></h2>'
+                            +'</div>'
+                        +'</li>'
+                        document.querySelector('.li-1 ul').insertAdjacentHTML('beforeend', li);
+            }
+        })
+        document.querySelector('.modal-product ul li:last-child').addEventListener('click', function(){
+            document.querySelector('.modal-product').style.display = 'none';
+        })
+    </script>
+</body>
+</html>

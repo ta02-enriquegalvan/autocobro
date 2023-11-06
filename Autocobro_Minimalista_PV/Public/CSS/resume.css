@@ -1,0 +1,51 @@
+.resume{
+    height: 70%;
+    margin: auto 20% 5% 8%;
+    background: linear-gradient(0deg, whitesmoke, rgb(245 245 245 / 30%));
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    box-shadow: 6px -7px 0px rgb(211 211 211 / 50%);
+    flex-direction: column;
+}
+.resume > div {
+    display: flex;
+}
+.resume > div > img {
+    margin: auto;
+    height: 50%;
+}
+
+.resume h2{
+    margin: auto;
+}
+
+table{
+    width: 100%;
+}
+table th, table td {
+    text-align: left;
+    padding: 1rem 0.2rem;
+}
+
+table tr td:first-child{
+    display: block;
+    color: darkslategray;
+    width: 2rem;
+}
+
+table tr{
+    font-size: large;
+}
+table tr td:nth-child(2){
+    font-size: larger;
+}
+table tr td:nth-child(3){
+    color: darkslategray;
+}
+
+table tr td:last-child{
+    color: forestgreen;
+    font-size: x-large;
+}
